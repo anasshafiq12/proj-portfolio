@@ -23,7 +23,7 @@ const typingTexts = [
 
 const stats = [
   { icon: Code2, label: "Projects", value: "20+", color: "text-primary" },
-  { icon: Clock, label: "Experience", value: "2+ yrs", color: "text-accent" },
+  { icon: Clock, label: "Experience", value: "1+ yrs", color: "text-accent" },
   { icon: Sparkles, label: "Technologies", value: "30+", color: "text-traffic-green" },
   { icon: Eye, label: "Profile Views", value: "5K+", color: "text-traffic-yellow" },
 ];
@@ -112,7 +112,7 @@ const HomeTab = ({ onNavigate }: HomeTabProps) => {
               <span className="text-xs font-medium text-primary">Welcome to my portfolio</span>
             </motion.div>
             <h1 className="text-5xl font-black tracking-tight md:text-7xl">
-              <span className="gradient-text">Shafiq</span>
+              <span className="gradient-text">Portfolio</span>
               <span className="text-foreground">Search</span>
             </h1>
           </motion.div>
@@ -284,7 +284,7 @@ const HomeTab = ({ onNavigate }: HomeTabProps) => {
             >
               <p className="text-xs text-traffic-green mb-0.5 flex items-center gap-1">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-traffic-green" />
-                https://shafiq.dev/{result.tab}
+                https://anas.dev/{result.tab}
               </p>
               <p className="text-base font-medium text-primary group-hover:underline flex items-center gap-2">
                 {result.icon} {result.title}

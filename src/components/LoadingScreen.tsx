@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Globe, Code2, Sparkles, Rocket } from "lucide-react";
 
 const loadingSteps = [
-  { icon: Globe, text: "Initializing Shafiq Browser...", progress: 15 },
+  { icon: Globe, text: "Initializing Browser...", progress: 15 },
   { icon: Code2, text: "Loading portfolio assets...", progress: 40 },
   { icon: Sparkles, text: "Compiling experiences...", progress: 70 },
   { icon: Rocket, text: "Almost there! Launching...", progress: 95 },
@@ -72,8 +72,8 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
 
         {/* Title */}
         <div className="text-center">
-          <h1 className="text-2xl font-bold gradient-text">Shafiq Browser</h1>
-          <p className="mt-1 text-sm text-muted-foreground">v2024 — Developer Edition</p>
+          <h1 className="text-2xl font-bold gradient-text">Portfolio Explorer</h1>
+          <p className="mt-1 text-sm text-muted-foreground">v2026 — Developer Edition</p>
         </div>
 
         {/* Step text */}
