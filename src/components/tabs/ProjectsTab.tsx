@@ -1,108 +1,96 @@
 import { useState } from "react";
+import rec1 from "../../assets/recruitpro/rec1.png";
+import rec2 from "../../assets/recruitpro/rec2.png";
+import rec3 from "../../assets/recruitpro/rec3.png";
+
+import ho1 from "../../assets/homerepair/ho1.png"
+import ho2 from "../../assets/homerepair/ho2.png"
+import ho3 from "../../assets/homerepair/ho3.png"
+
+import fin1 from "../../assets/finance/fin1.png"
+import fin2 from "../../assets/finance/fin2.png"
+import fin3 from "../../assets/finance/fin3.png"
+
+import vis1 from "../../assets/visionai/vis1.png"
+
 
 const projects = {
   fullstack: [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce application with cart management, payment integration, and admin dashboard. Built with modern technologies for optimal performance and scalability.",
-      tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Stripe"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "  RecruitPro",
+      description: "RecruitPro is an end-to-end talent acquisition platform designed to bridge the gap between high-caliber professionals and forward-thinking organizations through intelligent automation. It streamlines the entire hiring lifecycle—from automated job distribution and resume parsing to collaborative interview scheduling and digital onboarding—all within a centralized dashboard. By focusing on data-driven matching and bias reduction, the platform helps recruitment teams cut down time-to-hire significantly while ensuring a seamless, professional experience for every candidate.",
+      tech: ["React", "FastAPI", "PostgreSQL", "Tailwind CSS", "Stripe", "Hugging Face"],
+      github: "https://github.com/anasshafiq12/proj-recruitpro.git",
       images: [
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&h=420&fit=crop",
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=700&h=420&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&h=420&fit=crop",
+        rec1,
+        rec2,
+        rec3,
       ],
-      year: "2024",
-      status: "Live",
+      year: "2026",
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, drag-and-drop boards, and team analytics for productive workflows across distributed teams.",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Socket.io"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "ElectroFix",
+      description: "ElectroFix serves as a comprehensive digital bridge between homeowners, professional technicians, and specialized hardware vendors. The platform streamlines the entire property maintenance lifecycle by offering on-demand service booking alongside a robust multi-vendor marketplace for repair parts and home improvement goods. With a centralized administration suite to oversee service quality, dispute resolution, and vendor payouts, it transforms fragmented home maintenance into a seamless, end-to-end consumer experience.",
+      tech: ["ASP .Net", "Blazor", "MsSQL", "Socket.io", "OpenAI API"],
+      github: "https://github.com/anasshafiq12/HomeRepairApp.git",
       images: [
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=700&h=420&fit=crop",
-        "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=700&h=420&fit=crop",
-        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=700&h=420&fit=crop",
+        ho1,
+        ho2,
+        ho3
       ],
-      year: "2024",
-      status: "Live",
+      year: "2025",
     },
     {
-      title: "Real Estate Portal",
-      description: "A comprehensive real estate listing platform featuring map-based search, virtual property tours, mortgage calculators, and agent dashboards with CRM integration.",
-      tech: ["React", "Express", "MySQL", "Redis", "AWS S3"],
-      github: "https://github.com",
-      live: null,
+      title: "Expense Tracker",
+      description: "This finance management ecosystem empowers users to take full control of their fiscal health through intelligent automation and real-time data visualization. By integrating advanced OCR (Optical Character Recognition) technology, the platform eliminates manual data entry by instantly transforming physical receipts and invoices into structured digital records. Beyond simple expense tracking, the system provides deep analytical insights into spending patterns, automated budget alerts, and secure cloud synchronization for a holistic view of personal or business capital. It serves as a centralized financial command center, bridging the gap between raw transaction data and actionable wealth-management strategies.",
+      tech: ["React", "FastAPI", "PostgreSQL", "Computer Vision", "AWS S3"],
+      github: "https://github.com/anasshafiq12/proj-finance-tracker.git",
       images: [
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&h=420&fit=crop",
-        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=700&h=420&fit=crop",
+        fin1,
+        fin2,
+        fin3
       ],
-      year: "2023",
-      status: "Archived",
+      year: "2025",
     },
   ],
   backend: [
     {
-      title: "Auth Microservice",
-      description: "A production-grade authentication microservice supporting OAuth 2.0, JWT, refresh tokens, MFA via TOTP, and rate limiting. Includes audit logging, session management, and a full admin API.",
-      tech: ["Node.js", "Redis", "PostgreSQL", "Docker", "Kubernetes"],
-      github: "https://github.com",
+      title: "Project Suggestion Microservice",
+      description: "This service is a high-performance, enterprise-grade recommendation engine designed to deliver deeply personalized consumer experiences through advanced semantic understanding. By leveraging Vector Databases and Approximate Nearest Neighbor (ANN) search, the system transcends traditional keyword matching to identify complex relationships between products and user behaviors with sub-second latency. The architecture utilizes asynchronous task queues to handle high-dimensional embedding generation, ensuring the platform remains responsive even when processing massive data updates or catalog expansions..",
+      tech: ["FastAPI", "Celery", "PostgreSQL", "Docker"],
+      github: "https://github.com/anasshafiq12/proj-product-recommendation.git",
+      year: "2026",
+      stats: [{ label: "Uptime", value: "99.9%" }, { label: "Latency", value: "<10ms" }],
+    },
+    {
+      title: "WorkSphere",
+      description: "This is a project management backend engineered to streamline complex organizational workflows and enhance cross-functional team collaboration. Built as a robust ASP.NET service, it serves as the centralized engine for task orchestration, resource allocation, and real-time progress tracking across diverse project portfolios. By providing a scalable and secure infrastructure for managing data-driven roadmaps, WorkSphere ensures that high-level project goals are seamlessly translated into actionable, measurable milestones.",
+      tech: ["ASP. NET", "GraphQL", "MsSQL Server", "gRPC"],
+      github: "https://github.com/anasshafiq12/WorkSphere-Backend.git",
       year: "2024",
       status: "Production",
-      stats: [{ label: "Req/min", value: "50k+" }, { label: "Uptime", value: "99.9%" }, { label: "Latency", value: "<10ms" }],
-    },
-    {
-      title: "GraphQL API Gateway",
-      description: "A federated GraphQL gateway aggregating 12 microservices into a unified schema. Features query batching, N+1 resolution via DataLoader, schema stitching, and real-time subscriptions.",
-      tech: ["Apollo Server", "GraphQL", "Node.js", "TypeScript", "gRPC"],
-      github: "https://github.com",
-      year: "2024",
-      status: "Production",
-      stats: [{ label: "Services", value: "12" }, { label: "Queries/day", value: "2M+" }, { label: "P99", value: "45ms" }],
-    },
-    {
-      title: "Event Streaming Pipeline",
-      description: "A high-throughput event processing pipeline using Kafka for message streaming, Flink for stateful computation, and a custom dead-letter queue system with sub-second latency.",
-      tech: ["Kafka", "Apache Flink", "Python", "Docker", "ClickHouse"],
-      github: "https://github.com",
-      year: "2023",
-      status: "Live",
-      stats: [{ label: "Events/sec", value: "100k" }, { label: "Partitions", value: "256" }, { label: "Lag", value: "<500ms" }],
-    },
-    {
-      title: "File Processing Service",
-      description: "Async file processing service for large-scale document transformation — supports PDF, DOCX, image compression, and video transcoding with a worker queue and retry logic.",
-      tech: ["Python", "Celery", "RabbitMQ", "FFmpeg", "S3"],
-      github: "https://github.com",
-      year: "2023",
-      status: "Archived",
-      stats: [{ label: "Files/day", value: "500k" }, { label: "Formats", value: "18" }, { label: "Workers", value: "32" }],
+      stats: [{ label: "Services", value: "12" }, { label: "Queries/day", value: "10+" }, { label: "P99", value: "45ms" }],
     },
   ],
   aiml: [
     {
-      title: "AI Chat Dashboard",
-      description: "An intelligent conversational interface powered by a fine-tuned LLM. Features custom system prompts, conversation memory, RAG pipeline with vector search, and real-time analytics tracking model performance.",
+      title: "VisionAI",
+      description: "VisionAI is an advanced computer vision ecosystem designed to transform raw visual data into actionable intelligence through real-time object detection and spatial analysis. The platform serves as an intelligent system capable of identifying, tracking, and classifying multiple entities simultaneously with high precision and minimal latency. By bridging the gap between hardware input and cognitive understanding, it enables automated monitoring, safety compliance, and data-driven decision-making across diverse environments.",
       tech: ["Python", "FastAPI", "LangChain", "Pinecone", "React"],
-      github: "https://github.com",
-      live: "https://example.com",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&h=420&fit=crop",
+      github: "https://github.com/anasshafiq12/proj-visionai.git",
+      image: vis1,
       year: "2024",
       status: "Live",
       showImage: true,
     },
     {
-      title: "Sentiment Analysis Engine",
-      description: "A transformer-based sentiment classifier trained on 2M+ product reviews. Supports aspect-level sentiment detection across 14 product categories with 94.2% accuracy. Deployed as a REST API serving 5M+ predictions per month with an automated retraining pipeline triggered by data drift detection.",
-      tech: ["PyTorch", "HuggingFace", "FastAPI", "MLflow", "Airflow"],
-      github: "https://github.com",
+      title: "FaceForge",
+      description: "This is computer vision app to perform high-precision facial analysis and real-time image manipulation. By extracting granular facial landmarks—mapping key coordinate points across the eyes, nose, mouth, and jawline—the system creates a digital mesh that understands the unique geometry of any human face. This structural data serves as the foundation for seamless face-swapping algorithms and the application of complex, context-aware digital filters that adapt dynamically to user expressions and head orientation.",
+      tech: ["PyTorch", "OpenCV", "Python", "Streamlit"],
+      github: "https://github.com/anasshafiq12/proj-expression-detection.git",
       year: "2024",
-      status: "Production",
       showImage: false,
-      metrics: [{ label: "Accuracy", value: "94.2%" }, { label: "Predictions/mo", value: "5M+" }, { label: "Latency", value: "23ms" }, { label: "Categories", value: "14" }],
+      metrics: [{ label: "Accuracy", value: "94.2%" }, { label: "Latency", value: "23ms" }],
     },
   ],
 };
@@ -211,7 +199,7 @@ function ImageCarousel({ images, title }) {
       style={{ aspectRatio: "16/9" }}
     >
       <img key={idx} src={images[idx]} alt={title}
-        className="w-full h-full object-cover block transition-opacity duration-300" />
+        className="w-full h-full object-contain block transition-opacity duration-300" />
       {images.length > 1 && (
         <>
           <button
@@ -320,7 +308,7 @@ function AiMlCard({ p }) {
     return (
       <ProjectCard accent="#a21caf">
         <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
-          <img src={p.image} alt={p.title} className="w-full h-full object-cover block" />
+          <img src={p.image} alt={p.title} className="w-full h-full object-contain block" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }} />
           <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between gap-2">
             <h3 className="m-0 text-[15px] font-bold text-white">{p.title}</h3>
@@ -411,14 +399,10 @@ export default function ProjectsTab() {
         <div className="bg-card border border-border rounded-xl mb-5 shadow-sm overflow-hidden">
           {/* Window chrome */}
           <div className="flex items-center px-4 pt-2.5 pb-0 gap-0">
-            <div className="flex gap-1.5 mr-auto">
-              <span className="w-2.5 h-2.5 rounded-full bg-red-400 block" />
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-400 block" />
-              <span className="w-2.5 h-2.5 rounded-full bg-green-400 block" />
-            </div>
+            
             <span className="text-[10px] md:text-[11px] text-muted-foreground font-mono flex items-center gap-1">
               <span className="font-bold transition-colors duration-300" style={{ color: accent }}>{">"}_</span>
-              <span className="hidden xs:inline">shafiq.projects</span>
+              <span className="hidden xs:inline">anas.projects</span>
               <span className="xs:hidden">projects</span>
             </span>
             <div className="ml-auto" />

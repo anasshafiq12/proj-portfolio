@@ -63,7 +63,7 @@ const BrowserFrame = ({
   const [isUrlFocused, setIsUrlFocused] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const [isMaximized, setIsMaximized] = useState(false);
+  const [isMaximized, setIsMaximized] = useState(true);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
