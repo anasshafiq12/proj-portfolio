@@ -112,8 +112,8 @@ const HomeTab = ({ onNavigate }: HomeTabProps) => {
               <span className="text-xs font-medium text-primary">Welcome to my portfolio</span>
             </motion.div>
             <h1 className="text-5xl font-black tracking-tight md:text-7xl">
-              <span className="gradient-text">Portfolio</span>
-              <span className="text-foreground">Search</span>
+              <span className="gradient-text">Anas's </span>
+              <span className="text-foreground">Portfolio</span>
             </h1>
           </motion.div>
 
