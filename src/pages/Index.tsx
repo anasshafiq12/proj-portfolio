@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import BrowserFrame, { type TabId } from "@/components/BrowserFrame";
@@ -10,10 +10,22 @@ import ContactTab from "@/components/tabs/ContactTab";
 const Index = () => {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<TabId>("home");
-  const [isIncognito, setIsIncognito] = useState(false);
+  
+  // 1. Set default to true
+  const [isIncognito, setIsIncognito] = useState(true);
+  
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [history, setHistory] = useState<TabId[]>(["home"]);
   const [historyIndex, setHistoryIndex] = useState(0);
+
+  // 2. Ensure the dark class is applied on initial mount
+  useEffect(() => {
+    if (isIncognito) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
 
   const handleTabChange = useCallback((tab: TabId) => {
     setActiveTab(tab);
