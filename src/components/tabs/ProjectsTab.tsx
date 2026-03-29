@@ -55,7 +55,7 @@ const projects = {
   ],
   backend: [
     {
-      title: "Project Suggestion Microservice",
+      title: "Product Suggestion Microservice",
       description: "This service is a high-performance, enterprise-grade recommendation engine designed to deliver deeply personalized consumer experiences through advanced semantic understanding. By leveraging Vector Databases and Approximate Nearest Neighbor (ANN) search, the system transcends traditional keyword matching to identify complex relationships between products and user behaviors with sub-second latency. The architecture utilizes asynchronous task queues to handle high-dimensional embedding generation, ensuring the platform remains responsive even when processing massive data updates or catalog expansions..",
       tech: ["FastAPI", "Celery", "PostgreSQL", "Docker"],
       github: "https://github.com/anasshafiq12/proj-product-recommendation.git",
